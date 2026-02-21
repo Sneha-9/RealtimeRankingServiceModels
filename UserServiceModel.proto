@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+message User {
+  string name = 1;
+  string email = 2;
+  string id = 3;
+}
+
+message GetUsersResponse {
+  repeated User users = 1;
+}
+
+message UserRegisterRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message UserRegisterResponse {
+  string id = 1;
+}
+
+message UserValidationResponse {
+  bool isValid = 1;
+}
+
+message UserValidationRequest {
+  string id = 1;
+}
