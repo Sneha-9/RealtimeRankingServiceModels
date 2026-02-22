@@ -7,7 +7,7 @@ message Point{
   int32 value=1;
 }
 
-message UserData{
+message UserPointData{
   string id =1;
   Point point =2;
 
@@ -26,5 +26,5 @@ message GetUserPointRequest{
 }
 
 message GetUserPointResponse{
-  repeated UserData points = 1;
+  repeated UserPointData points = 1;
 }
