@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.sneha.pointservice";
+
+message Point{
+  int32 value=1;
+}
+
+message UserData{
+  string id =1;
+  Point point =2;
+
+}
+
+message  UserPointAggregationRequest{
+  int32 point=1;
+  string id =2;
+}
+
+message UserPointAggregationResponse{
+  int32 aggregatedPoint=1;
+}
+message GetUserPointRequest{
+  int32 minPoint=1;
+}
+
+message GetUserPointResponse{
+  repeated UserData points = 1;
+}
