@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.sneha.rankingservice";
+
+message UserPoint{
+  string name =1;
+  int32 point =2;
+
+}
+
+message  GetUserRankRequest{
+  int32 minPoint=1;
+
+}
+message GetUserRankResponse{
+  repeated UserPoint userPointList=1;
+}
