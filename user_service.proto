@@ -23,7 +23,7 @@ message UserRegisterResponse {
 }
 
 message UserValidationResponse {
-  bool isValid = 1;
+  optional bool isValid = 1;
 }
 
 message UserValidationRequest {
